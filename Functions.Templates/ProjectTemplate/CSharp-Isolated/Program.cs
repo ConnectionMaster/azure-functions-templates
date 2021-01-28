@@ -1,10 +1,9 @@
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
-using System.Diagnostics;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Azure.Functions.Worker.Configuration;
 
-namespace FunctionApp
+namespace Company.FunctionApp
 {
     class Program
     {

@@ -16,6 +16,12 @@
     },
     "sourceName": "Company.FunctionApp",
     "symbols": {
+        "Namespace": {
+            "description": "namespace for the generated code",
+            "replaces": "Company.FunctionApp",
+            "defaultValue": "FunctionApp",
+            "type": "parameter"
+        },
         "StorageConnectionStringValue": {
             "description": "The connection string for your Azure WebJobs Storage.",
             "type": "parameter",
