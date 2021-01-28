@@ -1,0 +1,20 @@
+{
+    "defaultFunctionName": "HttpTrigger",
+    "description": "$HttpTrigger_description",
+    "name": "HTTP trigger",
+    "language": "C#",
+    "category": [
+        "$temp_category_core",
+        "$temp_category_api"
+    ],
+    "categoryStyle": "http",
+    "enabledInTryMode": true,
+    "userPrompt": [
+        "authLevel"
+    ],
+    "extensions": [
+        {
+            "id": "Microsoft.Azure.WebJobs.Extensions.Storage", "version": "4.0.3"
+        }
+    ]
+}

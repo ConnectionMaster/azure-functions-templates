@@ -105,6 +105,7 @@
     <Content Include="ProjectTemplate\local.settings.json" />
     <Content Include="ProjectTemplate\_gitignore" />
     <Content Include="Templates\BlobTrigger-CSharp\BlobTriggerCSharp.cs" />
+    <Content Include="Templates\BlobTrigger-CSharp-Isolated\BlobTriggerCSharp.cs" />
     <Content Include="Templates\BlobTrigger-FSharp\BlobTriggerFSharp.fs" />
     <Content Include="Templates\BlobTrigger-JavaScript\function.json" />
     <Content Include="Templates\BlobTrigger-JavaScript\metadata.json" />
@@ -192,6 +193,7 @@
     <Content Include="Templates\EventHubTrigger-Python\metadata.json" />
     <Content Include="Templates\EventHubTrigger-Python\sample.dat" />
     <Content Include="Templates\HttpTrigger-CSharp\HttpTriggerCSharp.cs" />
+    <Content Include="Templates\HttpTrigger-CSharp-Isolated\HttpTriggerCSharp.cs" />
     <Content Include="Templates\HttpTrigger-FSharp\HttpTriggerFSharp.fs" />
     <Content Include="Templates\HttpTrigger-JavaScript\function.json" />
     <Content Include="Templates\HttpTrigger-JavaScript\metadata.json" />
@@ -255,6 +257,7 @@
     <Content Include="Templates\ProfilePhotoAPI-CSharp\metadata.json" />
     <Content Include="Templates\ProfilePhotoAPI-CSharp\run.csx" />
     <Content Include="Templates\QueueTrigger-CSharp\QueueTriggerCSharp.cs" />
+    <Content Include="Templates\QueueTrigger-CSharp-Isolated\QueueTriggerCSharp.cs" />
     <Content Include="Templates\QueueTrigger-FSharp\QueueTriggerFSharp.fs" />
     <Content Include="Templates\QueueTrigger-JavaScript\function.json" />
     <Content Include="Templates\QueueTrigger-JavaScript\metadata.json" />
@@ -326,6 +329,9 @@
     <Content Include="Templates\BlobTrigger-CSharp\metadata.json" />
     <Content Include="Templates\BlobTrigger-CSharp\readme.md" />
     <Content Include="Templates\BlobTrigger-CSharp\sample.dat" />
+    <Content Include="Templates\BlobTrigger-CSharp-Isolated\build.config\template.json" />
+    <Content Include="Templates\BlobTrigger-CSharp-Isolated\build.config\vs-2017.3.host.json" />
+    <Content Include="Templates\BlobTrigger-CSharp-Isolated\metadata.json" />
     <Content Include="Templates\BlobTrigger-FSharp\build.config\template.json" />
     <Content Include="Templates\BlobTrigger-FSharp\build.config\vs-2017.3.host.json" />
     <Content Include="Templates\BlobTrigger-FSharp\function.json" />
@@ -338,6 +344,9 @@
     <Content Include="Templates\HttpTrigger-CSharp\metadata.json" />
     <Content Include="Templates\HttpTrigger-CSharp\readme.md" />
     <Content Include="Templates\HttpTrigger-CSharp\sample.dat" />
+    <Content Include="Templates\HttpTrigger-CSharp-Isolated\build.config\template.json" />
+    <Content Include="Templates\HttpTrigger-CSharp-Isolated\build.config\vs-2017.3.host.json" />
+    <Content Include="Templates\HttpTrigger-CSharp-Isolated\metadata.json" />
     <Content Include="Templates\HttpTrigger-FSharp\build.config\template.json" />
     <Content Include="Templates\HttpTrigger-FSharp\build.config\vs-2017.3.host.json" />
     <Content Include="Templates\HttpTrigger-FSharp\function.json" />
@@ -350,6 +359,9 @@
     <Content Include="Templates\QueueTrigger-CSharp\metadata.json" />
     <Content Include="Templates\QueueTrigger-CSharp\readme.md" />
     <Content Include="Templates\QueueTrigger-CSharp\sample.dat" />
+    <Content Include="Templates\QueueTrigger-CSharp-Isolated\build.config\template.json" />
+    <Content Include="Templates\QueueTrigger-CSharp-Isolated\build.config\vs-2017.3.host.json" />
+    <Content Include="Templates\QueueTrigger-CSharp-Isolated\metadata.json" />
     <Content Include="Templates\QueueTrigger-FSharp\build.config\template.json" />
     <Content Include="Templates\QueueTrigger-FSharp\build.config\vs-2017.3.host.json" />
     <Content Include="Templates\QueueTrigger-FSharp\function.json" />
