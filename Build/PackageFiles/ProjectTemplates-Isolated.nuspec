@@ -18,6 +18,7 @@
   <files>
     <file src="../../Functions.Templates/ProjectTemplate/CSharp-Isolated/_gitignore" target="content/ProjectTemplate-CSharp/_gitignore" />
     <file src="../../Functions.Templates/ProjectTemplate/CSharp-Isolated/Company.FunctionApp.csproj" target="content/ProjectTemplate-CSharp/Company.FunctionApp.csproj" />
+    <file src="../../Functions.Templates/ProjectTemplate/CSharp-Isolated/Program.cs" target="content/ProjectTemplate-CSharp/Program.cs" />
     <file src="../../Functions.Templates/ProjectTemplate/CSharp-Isolated/host.json" target="content/ProjectTemplate-CSharp/host.json" />
     <file src="../../Functions.Templates/ProjectTemplate/CSharp-Isolated/local.settings.json" target="content/ProjectTemplate-CSharp/local.settings.json" />
     <file src="../../Functions.Templates/ProjectTemplate/CSharp-Isolated/.template.config/template.json" target="content/ProjectTemplate-CSharp/.template.config/template.json" />
