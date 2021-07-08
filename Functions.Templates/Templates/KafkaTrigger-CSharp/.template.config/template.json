@@ -41,8 +41,8 @@
         "Password": {
             "description": "SASL password for use with the PLAIN and SASL_SCRAM",
             "type": "parameter",
-            "defaultValue": "%Password%",
-            "replaces": "%Password%"
+            "defaultValue": "%KafkaPassword%",
+            "replaces": "%KafkaPassword%"
         },
         "Protocol": {
             "description": "Security protocol used to communicate with brokers",
@@ -121,7 +121,7 @@
           "ManualInstructions": [],
           "args": {
             "referenceType": "package",
-            "reference": "Microsoft.Azure.WebJobs.Extensions.Kafka", "version": "3.2.1",
+            "reference": "Microsoft.Azure.WebJobs.Extensions.Kafka", "version": "3.3.2",
             "projectFileExtensions": ".csproj"
           }
         },

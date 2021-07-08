@@ -122,7 +122,7 @@
       "enabledInTryMode": true,
       "documentation": "$content=Documentation\\rabbitMQTrigger.md",
       "extension": {
-        "id": "Microsoft.Azure.WebJobs.Extensions.RabbitMQ", "version": "1.0.0-beta"
+        "id": "Microsoft.Azure.WebJobs.Extensions.RabbitMQ", "version": "1.0.0"
       },
       "settings": [
         {
@@ -164,7 +164,7 @@
       "enabledInTryMode": true,
       "documentation": "$content=Documentation\\kafkaTrigger.md",
       "extension": {
-        "id": "Microsoft.Azure.WebJobs.Extensions.Kafka", "version": "3.2.1"
+        "id": "Microsoft.Azure.WebJobs.Extensions.Kafka", "version": "3.3.2"
       },
       "settings": [
         {
@@ -209,7 +209,7 @@
         {
           "name": "password",
           "value": "string",
-          "defaultValue": "%Password%",           
+          "defaultValue": "%KafkaPassword%",           
           "resource": "AppSetting",
           "required": false,
           "label": "$kafka_password_label",
@@ -221,11 +221,26 @@
           "required": true,
           "defaultValue":"SASLSSL",
           "enum": [
-            "NOTSET",
-            "PLAINTEXT",
-            "SSL",
-            "SASLPLAINTEXT",
-            "SASLSSL"
+            {
+              "value": "NOTSET",
+              "display": "Not Set"
+            },
+            {
+              "value": "PLAINTEXT",
+              "display": "Plaintext"
+            },
+            {
+              "value": "SSL",
+              "display": "SSL"
+            },
+            {
+              "value": "SASLPLAINTEXT",
+              "display": "SASL Plaintext"
+            },
+            {
+              "value": "SASLSSL",
+              "display": "SASL SSL"
+            }
           ],
           "label": "$kafka_protocol_label",
           "help": "$kafka_protocol_help"
@@ -236,11 +251,26 @@
           "defaultValue": "PLAIN",
           "required": false,
           "enum": [
-            "NOTSET",
-            "GSSAPI",
-            "PLAIN",
-            "SCRAMSHA256",
-            "SCRAMSHA512"
+            {
+              "value": "NOTSET",
+              "display": "Not Set"
+            },
+            {
+              "value": "GSSAPI",
+              "display": "GSS API"
+            },
+            {
+              "value": "PLAIN",
+              "display": "Plain"
+            },
+            {
+              "value": "SCRAMSHA256",
+              "display": "SCRAM SHA-256"
+            },
+            {
+              "value": "SCRAMSHA512",
+              "display": "SCRAM SHA-512"
+            }
           ],
           "label": "$kafka_authenticationmode_label",
           "help": "$kafka_authenticationmode_help"
@@ -252,6 +282,126 @@
           "required": false,
           "label": "$kafka_consumergroup_label",
           "help": "$kafka_consumergroup_help"
+        }
+      ]
+    },
+    {
+      "type": "kafka",
+      "displayName": "$kafkaOutput_displayName",
+      "direction": "out",
+      "enabledInTryMode": false,
+      "documentation": "$content=Documentation\\kafkaOut.md",
+      "extension": {
+        "id": "Microsoft.Azure.WebJobs.Extensions.Kafka", "version": "3.3.2"
+      },
+      "settings": [
+        {
+          "name": "name",
+          "value": "string",
+          "defaultValue": "eventData",
+          "required": true,
+          "label": "$kafka_name_label",
+          "help": "$kafka_name_help",
+          "validators": [
+            {
+              "expression": "^[a-zA-Z][a-zA-Z0-9]{0,127}$",
+              "errorText": "[variables('parameterName')]"
+            }
+          ]
+        },
+        {
+          "name": "brokerList",
+          "value": "string",
+          "resource": "AppSetting",
+          "defaultValue": "BrokerList",
+          "required": true,
+          "label": "$kafka_brokerlist_label",
+          "help": "[variables('appSettingsHelp')]"
+        },
+        {
+          "name": "topic",
+          "value": "string",
+          "defaultValue": "topic",
+          "required": true,
+          "label": "$kafka_topic_label",
+          "help": "$kafka_topic_help"
+        },
+        {
+          "name": "username",
+          "value": "string",
+          "defaultValue": "$ConnectionString",         
+          "required": false,
+          "label": "$kafka_username_label",
+          "help": "$kafka_username_help"
+        },
+        {
+          "name": "password",
+          "value": "string",
+          "defaultValue": "%KafkaPassword%",           
+          "resource": "AppSetting",
+          "required": false,
+          "label": "$kafka_password_label",
+          "help": "[variables('appSettingsHelp')]"
+        },
+        {
+          "name": "protocol",
+          "value": "enum",
+          "required": true,
+          "defaultValue":"SASLSSL",
+          "enum": [
+            {
+              "value": "NOTSET",
+              "display": "Not Set"
+            },
+            {
+              "value": "PLAINTEXT",
+              "display": "Plaintext"
+            },
+            {
+              "value": "SSL",
+              "display": "SSL"
+            },
+            {
+              "value": "SASLPLAINTEXT",
+              "display": "SASL Plaintext"
+            },
+            {
+              "value": "SASLSSL",
+              "display": "SASL SSL"
+            }
+          ],
+          "label": "$kafka_protocol_label",
+          "help": "$kafka_protocol_help"
+        },
+        {
+          "name": "authenticationMode",
+          "value": "enum",
+          "defaultValue": "PLAIN",
+          "required": false,
+          "enum": [
+            {
+              "value": "NOTSET",
+              "display": "Not Set"
+            },
+            {
+              "value": "GSSAPI",
+              "display": "GSS API"
+            },
+            {
+              "value": "PLAIN",
+              "display": "Plain"
+            },
+            {
+              "value": "SCRAMSHA256",
+              "display": "SCRAM SHA-256"
+            },
+            {
+              "value": "SCRAMSHA512",
+              "display": "SCRAM SHA-512"
+            }
+          ],
+          "label": "$kafka_authenticationmode_label",
+          "help": "$kafka_authenticationmode_help"
         }
       ]
     },
@@ -1301,7 +1451,7 @@
       "enabledInTryMode": false,
       "documentation": "$content=Documentation\\entityTrigger.md",
       "extension": {
-        "id": "Microsoft.Azure.WebJobs.Extensions.DurableTask", "version": "2.4.1"
+        "id": "Microsoft.Azure.WebJobs.Extensions.DurableTask", "version": "2.5.0"
       },
       "settings": [
         {
@@ -1360,7 +1510,7 @@
       "enabledInTryMode": false,
       "documentation": "$content=Documentation\\orchestrationClientIn.md",
       "extension": {
-        "id": "Microsoft.Azure.WebJobs.Extensions.DurableTask", "version": "2.4.1"
+        "id": "Microsoft.Azure.WebJobs.Extensions.DurableTask", "version": "2.5.0"
       },
       "settings": [
         {
